@@ -5,21 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/viridian-college" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/night-machine" rel="stylesheet">
-    <title>EXAMPLE LISTING</title>
     <style>
-        /* Grundlegende Seiteneinstellungen */
-        /* @font-face {
-            font-family: 'NightMachine';
-            src: url('NightMachine.otf') format('truetype');
-        } */
-        /* @font-face {
-            font-family: 'NightMachine';
-            src: url('https://www.dafont.com/de/night-machine.font') format('truetype');
-        }
-        @font-face {
-            font-family: 'Viridian College';
-            src: url('https://fonts.cdnfonts.com/css/viridian-college') format('truetype');
-        } */
         body {
             font-family: 'Viridian College';
             line-height: 1.6;
@@ -27,15 +13,9 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             height: 100vh;
             background-color: #016394;
-
-        }
-        h4 {
-            font-family: 'Night Machine';
-            color: #fdec00;
-            margin-top: 20px;
         }
         .description {
             margin-top: 20px;
@@ -52,8 +32,11 @@
         .header {
             text-align: center;
             width: 100%;
-            max-width: 1200px;
-            padding: 20px;
+        }
+        .header img {
+            width: 800px;  /* Bild nimmt 100% der Breite des Containers ein */
+            height: auto; /* Höhe wird automatisch angepasst, um das Seitenverhältnis zu wahren */
+            max-width: 100%;  /* Verhindert, dass das Bild breiter als der Container wird */
         }
         .logo {
             text-align: center;
@@ -61,32 +44,43 @@
             max-width: 1200px;
             padding: 20px;
         }
-        .menu {
+        .footer {
+            background-color: #084b91;
+            padding: 10px;
             text-align: center;
-            width: 10%;
+            border-radius: 5px;
+        }
+        .menu {
+            background-color: #084b91;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        /* Responsivität */
+        @media (max-width: 768px) {
+            .header img {
+                width: 90%;  /* Das Bild wird auf mobilen Geräten etwas verkleinert */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Logo über dem Rahmen -->
+    <div class="container">     
+
         <div class="header">
-            <a href="https://www.ebay.de/str/btfclothes" target="_blank">
-                <img src="../resources/img/Header.jpg" alt="Back to Future Logo">
+            <a href="https://www.ebay.de/str/btfclothes">
+                <img src="https://github.com/thger1312/BTF_HTML_Listing/blob/main/resources/img/Header.jpg?raw=true" alt="Back to Future Logo">
             </a>
         </div>
-        <!-- <h4>Vintage, Retro, Sustained</h4> -->
-            
-        <div style="background-color: #084b91; padding: 10px; text-align: center; border-radius: 5px;">
+    
+        <!-- Dein Hauptinhalt hier -->
+        <div class="menu">
             <a href="https://www.ebay.de/str/btfclothes" style="margin: 0 15px; text-decoration: none; color: #fdec00; font-family: Night Machine, sans-serif;">Alle Artikel</a>
             <a href="https://www.ebay.de/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=backtofuture_clothes&store_name=btfclothes&_oac=1&LH_BIN=1" style="margin: 0 15px; text-decoration: none; color: #fdec00; font-family: Night Machine, sans-serif;">Vintage Boxen</a>
             <a href="https://www.ebay.de/str/btfclothes/Herren/_i.html?_sacat=260012" style="margin: 0 15px; text-decoration: none; color: #fdec00; font-family: Night Machine, sans-serif;">Herren</a>
             <a href="https://www.ebay.de/str/btfclothes/Damen/_i.html?_sacat=260010" style="margin: 0 15px; text-decoration: none; color: #fdec00; font-family: Night Machine, sans-serif;">Damen</a>
-            <a href="https://www.instagram.com/backtofuture_clothes/?hl=de" target="_blank" style="margin: 0 15px;">
-                <img src="../resources/img/InstaBTF.png" alt="Instagram" style="width: 30px; height: 30px; vertical-align: middle;">
-            </a>
+            <a href="https://www.ebay.de/str/btfclothes/Kinder/_i.html?_sacat=171146" style="margin: 0 15px; text-decoration: none; color: #fdec00; font-family: Night Machine, sans-serif;">Kids</a>
         </div>
-        
         
         <div class="description">
             <p class="highlight">Produktbeschreibung:</p>
@@ -98,14 +92,23 @@
             </ul>
             <p>Dieser Artikel ist ideal für alle, die sich in die gute alte Zeit zurückversetzen möchten und dabei Wert auf Nachhaltigkeit legen. Holen Sie sich ein Stück Vergangenheit in Ihr Zuhause!</p>
         </div>        
-        <!-- Dein Hauptinhalt hier -->
+
         
         <!-- Dein Footer hier -->
+        <div class="footer">
+            <a href="https://www.ebay.de/str/btfclothes?_tab=about" style="margin: 0 15px; text-decoration: none; color: #fdec00; font-family: Night Machine, sans-serif;">Impressum</a>
+            <a href="https://www.instagram.com/backtofuture_clothes/profilecard/?igsh=ZW9lb2l4OGwyZXdv" target="_blank" style="margin: 0 15px;">
+                <img src="https://github.com/thger1312/BTF_HTML_Listing/blob/main/resources/img/InstaBTF.png?raw=true" alt="Instagram" style="width: 30px; height: 30px; vertical-align: middle;">
+            </a>
+            <img src="https://github.com/thger1312/BTF_HTML_Listing/blob/main/resources/img/DHL.png?raw=true" alt="DHL" style="width: 80px; height: 100px; vertical-align: middle;">
+        </div>
+        
         <div class="logo">
             <a href="https://www.ebay.de/str/btfclothes" target="_blank">
-                <img src="../resources/img/Logo.png" alt="Back to Future Logo">
+                <img src="https://github.com/thger1312/BTF_HTML_Listing/blob/main/resources/img/Logo.png?raw=true" alt="Back to Future Logo">
             </a>
         </div>
+
     </div>
 </body>
 </html>
